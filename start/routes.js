@@ -17,7 +17,7 @@
 const Route = use('Route')
 
 Route.get('/', () => {
-  return { greeting: 'Hello world in JSON', please: "fount" }
+  return { greeting: 'Great!, its work' }
 })
 Route.group(() => {
     Route.post('/login','AuthController.login');
