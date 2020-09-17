@@ -19,3 +19,22 @@ const Route = use('Route')
 Route.get('/', () => {
   return { greeting: 'Hello world in JSON', please: "fount" }
 })
+Route.group(() => {
+    Route.post('/login','AuthController.login');
+    Route.post('/register','AuthController.register');  
+    Route.get('/getUser','AuthController.getUser');
+    
+    //Workspace
+        //Collaborator
+        //Projects
+            //Analytics
+                //accounts
+                    //Zappier
+            //Ux - Ui
+
+    //Briefings
+        Route.post('/briefings','BriefingController.store')
+    //Projects
+        Route.get('/projects','ProjectController.index')
+    
+}).prefix('api')
